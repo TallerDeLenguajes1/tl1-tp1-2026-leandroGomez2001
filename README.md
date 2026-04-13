@@ -32,3 +32,12 @@ En este código encontré 4 errores:
 2. En la línea 12 le agregué el & a valor1 en el scanf.
 3. En la línea 17 y 23 les faltaba el ;.
 4. Error de lógica: Lo que estaba pasando es que el resultado de la función duplicar número se estaba descartando y el valor de la variable valor1 no se estaba asignando por medio de la función duplicar número. La corrección que hice fue en lugar de llamar a la función con la variable valor1 (su valor), la llamo con la dirección de memoria de la variable valor1, la función recibe la dirección de memoria de valor1 y realiza el cambio en el valor que se encuentra en esa dirección (duplicándolo al multiplicar en 2 al número), de esa manera el valor de la variable valor1 cambia.
+
+## Preguntas inciso g)
+
+### Puntos 2 y 3 - ¿Por qué dan el mismo resultado?
+Los puntos 2 y 3 muestran la misma dirección de memoria porque: `puntero` almacena la dirección de `variable` y `&variable` es la dirección de `variable`. Ambos apuntan al mismo lugar en memoria, por eso el resultado es el mismo.
+
+### Punto 4 - ¿Por qué es distinto?
+`&puntero` es la dirección de memoria del propio puntero, no la dirección
+que él almacena. El puntero ocupa su propio espacio en memoria, distinto al de `variable`.
